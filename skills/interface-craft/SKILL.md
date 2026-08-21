@@ -2,7 +2,7 @@
 name: interface-craft
 description: >-
   Danny White's interface conventions for copy, typography, layout, surfaces,
-  motion restraint, and responsive behaviour. Use when writing UI copy, composing
+  motion restraint, and responsive behavior. Use when writing UI copy, composing
   screens, choosing a surface, or polishing human-facing interfaces. For broader
   design-engineering craft use Emil Kowalski's skills; for whether to build at
   all use ask-why.
@@ -16,7 +16,7 @@ Skill markdown in this repo stays ASCII. Curly punctuation is for **user-facing*
 
 ## Language and typography
 
-- **Sentence case** for headings, buttons, labels, and navigation. Not title case.
+- **Sentence case** for headings, buttons, labels, and navigation. Not title case. Exception: the document H1 may use title case when it is a brand or product name (e.g. README `# Danny's Skills`). Proper nouns keep their usual casing.
 - **Typographic punctuation in UI.** Prefer curly apostrophes and quotes in user-facing strings:
 
   | Use | Example |

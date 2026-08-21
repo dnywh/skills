@@ -19,7 +19,7 @@ Use `gh` for GitHub (issues, PRs, checks, releases). Do not add Copilot or other
 
 ## Drafting the PR
 
-Follow `.github/pull_request_template.md` when it exists. Skip the first "YES" contributing section and the "Additional context" section. Add a `## To test` section with clear callsites for a reviewer who doesn't have much time and just needs to click around the most important, easy-to-find callsites. Keep the overall description succinct. No em dashes.
+Follow `.github/pull_request_template.md` when it exists. Skip the first "YES" contributing section and the "Additional context" section. Add a `## To test` section with clear callsites for a reviewer who doesn't have much time and just needs to click around the most important, easy-to-find callsites. Keep the overall description succinct.
 
 If the repo has no `.github/pull_request_template.md`, skip the template and still add `## Manual testing`. If the template has no "YES" contributing section or "Additional context" section, skip those instructions.
 

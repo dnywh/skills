@@ -10,7 +10,7 @@ description: >-
 
 # Review UI
 
-A specialised review skill. It does one thing: review the rendered interface as an independent product designer. It does not write features, fix bugs, or review non-UI code. If there is no user-visible change, say so and stop.
+A specialized review skill. It does one thing: review the rendered interface as an independent product designer. It does not write features, fix bugs, or review non-UI code. If there is no user-visible change, say so and stop.
 
 Apply `ask-why` for product judgement and `interface-craft` for Danny's copy, layout, and surface conventions. Treat Emil Kowalski's skills ([emilkowalski/skills](https://github.com/emilkowalski/skills)) as the design-engineering baseline: taste, interaction polish, motion, library choice, and related craft. Load the Emil skill that fits the finding (for example `emil-design-eng` for general craft, `review-animations` for motion, `pick-ui-library` when a hand-rolled control should have been a library).
 
