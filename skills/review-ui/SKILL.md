@@ -1,22 +1,22 @@
 ---
 name: review-ui
 description: >-
-  Read-only design review of a human-facing interface (design review,
-  review-ui). Use when the user says design review, review the UI, or
-  /design-review, or when a PR diff changes a user-visible interface,
-  interaction, responsive behavior, or copy. Do not use for backend-only,
-  infrastructure, database, API, or test-only work with no interface change.
+  Read-only design review against Danny White's product bar. Use when the user
+  says design review, review the UI, or /design-review, or when a PR diff
+  changes a user-visible interface, interaction, responsive behavior, or copy.
+  Do not use for backend-only, infrastructure, database, API, or test-only
+  work with no interface change.
 ---
 
 # Review UI
 
 A specialised review skill. It does one thing: review the rendered interface as an independent product designer. It does not write features, fix bugs, or review non-UI code. If there is no user-visible change, say so and stop.
 
-Apply `ask-why` for product judgement. Use Emil's skills when motion is materially involved, starting from "should this animate at all?".
+Apply `ask-why` for product judgement and `interface-craft` for Danny's copy, layout, and surface conventions. Treat Emil Kowalski's skills ([emilkowalski/skills](https://github.com/emilkowalski/skills)) as the design-engineering baseline: taste, interaction polish, motion, library choice, and related craft. Load the Emil skill that fits the finding (for example `emil-design-eng` for general craft, `review-animations` for motion, `pick-ui-library` when a hand-rolled control should have been a library).
 
 ## How to use this
 
-Same pattern as Recharged: a **named review**, not a side effect of building.
+A **named review**, not a side effect of building.
 
 **In chat:** say `design review`, `review the UI`, or `use review-ui`.
 

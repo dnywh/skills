@@ -11,7 +11,7 @@ description: >-
 
 Agents are agreeable. They will help you build bloat without pushing back. Ask why before adding a feature, a control, an animation, an empty state, or an extra button. If the reason is "it looks complete" or "other apps have this", do not add it.
 
-This skill is the why. For animation technique, easing, and motion review, use Emil Kowalski's skills separately. For a read-only UI review, use `review-ui`.
+This skill is the why. For Danny's copy, layout, and surface conventions use `interface-craft`. For design-engineering craft (taste, interaction, motion, libraries, prototyping) use Emil Kowalski's skills. For a read-only UI review use `review-ui`.
 
 ## Challenge the brief
 
@@ -26,8 +26,6 @@ Do not block on questions the repository, current interface, or supplied design 
 - **If you cannot access something I sent, say so.** Do not guess or skip it silently.
 - **Do not start extra work.** No extra PRs, Copilot reviews, or follow-up issues unless I ask.
 - **Keep it pithy.** Short sentences. No throat-clearing.
-- **No em dashes**, except a matching pair that wraps an aside in the middle of a sentence: `to split up—wow, did you see that?—like this`.
-- **Markdown headings in sentence case**, not title case. Example: `## Installing the agent skill`.
 - **No comments in code** unless the why is non-obvious and cannot be made obvious by naming.
 
 ## One primary button per snapshot
@@ -54,38 +52,6 @@ Show the control the user needs for the default job. Hide advanced, rare, and de
 Do not dump every setting onto first paint to "make it discoverable". Discoverability for a power user is not worth the noise for everyone else.
 
 Ask: will most people on this screen need this control today? If no, hide it.
-
-## Pick the right surface
-
-Use the smallest surface that can finish the job. Agents default to a dialog.
-
-| Surface | Use for | Avoid when |
-| --- | --- | --- |
-| Inline | Information required for the current choice | The content is long or independently navigable |
-| Dialog | Short, focused, reversible task | The task is multi-step, resumable, or high stakes |
-| Sheet | Browsing, comparing, filters, or secondary detail | Losing the current page context would be clearer |
-| Page | Payment, agreements, long forms, multi-step or resumable work | The task is a single small confirmation |
-| Checklist | Independent asynchronous tasks | The tasks have a strict order and need a guided flow |
-
-Dialogs and sheets are for ephemeral or contextual work. Keep complex or resumable forms inline or on a dedicated page.
-
-## Cards are not a layout
-
-Use a card when it is the object or the interaction (an item, an invoice, a selectable plan). Do not wrap a page in cards to make it look designed.
-
-Prefer spacing, headings, dividers, and alignment over nested containers.
-
-## Default motion to little
-
-Add motion only when it clarifies a state change, a spatial relationship, a system response, or direct press feedback. Product motion stays restrained, quick, and interruptible.
-
-Do not add bouncy, theatrical, staggered, or decorative transitions to routine flows. Do not celebrate a pending or in-review state. For curves, duration, and performance, use Emil's skills.
-
-## Same essential actions across viewports
-
-Narrow and wide must keep the same essential information and actions. Do not hide the primary action or the current status on small screens, or invent a second hierarchy for desktop.
-
-Check the changed journey at a phone width and a desktop width. Report what you could not verify (auth, data, no preview) instead of claiming an unperformed check passed.
 
 ## What not to add
 

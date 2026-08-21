@@ -1,9 +1,9 @@
 ---
 name: stacked-prs
 description: >-
-  Splits work into GitHub stacked pull requests that are each mergeable on
-  their own. Use when the user asks to stack PRs, split work into PRs, or
-  de-risk a large change with a stack.
+  Splits work into stacked pull requests that are each mergeable on their own,
+  following Danny White's de-risking approach. Use when the user asks to stack
+  PRs, split work into PRs, or de-risk a large change with a stack.
 ---
 
 # Stacked PRs

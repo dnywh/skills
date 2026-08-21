@@ -1,16 +1,14 @@
 ---
-name: review-pr-comments
+name: address-pr-comments
 description: >-
-  Reviews and addresses pull request comments (RPRC). Use when the user says
-  RPRC, review PR comments, address review comments, or handle Copilot or
-  CodeRabbit feedback on a PR.
+  Addresses pull request review comments using Danny White's workflow. Use when
+  the user says address PR comments, address review comments, handle Copilot or
+  CodeRabbit feedback, or invokes /address-pr-comments.
 ---
 
-# Review PR comments
+# Address PR comments
 
-When the user says **RPRC** (Review Pull Request Comments):
-
-> Review all the PR comments. They might be from agents (Copilot, CodeRabbit) or humans. Address any that are obvious improvements, and resolve those conversations without an additional comment. Hold off on any you disagree. Play-back here in chat anything in between for us to discuss.
+When the user asks to address PR comments (for example `/address-pr-comments` or "address PR comments"), read all comments on the PR. They might be from agents (Copilot, CodeRabbit) or humans. Address obvious improvements and resolve those conversations without an additional comment. Hold off on any you disagree with. Play back anything in between here in chat for us to discuss.
 
 ## How to load comments
 

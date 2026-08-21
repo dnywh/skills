@@ -1,14 +1,14 @@
 ---
 name: make-pr
 description: >-
-  Drafts a GitHub pull request in Danny White's format (GRFR, MAPR). Use when
-  the user says GRFR, MAPR, make a PR, draft a PR, or get ready for review.
-  Does not open a pull request unless the user explicitly asked.
+  Drafts a GitHub pull request in Danny White's format. Use when the user says
+  make a PR, draft a PR, get ready for review, or invokes /make-pr. Does not
+  open a pull request unless the user explicitly asked.
 ---
 
 # Make a PR
 
-Only create a pull request when the user says **GRFR**, **MAPR**, or otherwise explicitly asks for one. Do not open a PR as a side effect of other work.
+Only create a pull request when the user explicitly asks (for example `/make-pr`, "make a PR", "draft a PR", or "get ready for review"). Do not open a PR as a side effect of other work.
 
 Use `gh` for GitHub (issues, PRs, checks, releases). Do not add Copilot or other reviewers unless asked. Do not rename a branch that already has an open PR as GitHub closes the PR.
 
@@ -17,11 +17,9 @@ Use `gh` for GitHub (issues, PRs, checks, releases). Do not add Copilot or other
 - **Commit title:** lowercase, like `update x`. No trailing period. Focus on why, not what. Proper nouns keep their usual casing.
 - **PR title:** conventional commits with a scope, like `feat(studio): fixes thing`. No trailing period.
 
-## GRFR / MAPR
+## Drafting the PR
 
-When the user says **GRFR** (Get Ready For Review) or **MAPR** (Make A Pull Request):
-
-> Make a draft PR following @.github/pull_request_template.md . Skip the first "YES" contributing section and the "Additional context" section. Add a "## To test" section with clear callsites for a reviewer who doesn't have much time and just need to click around the most important, easy to find, callsites. Keep the overall description succinct. No em dashes.
+Follow `.github/pull_request_template.md` when it exists. Skip the first "YES" contributing section and the "Additional context" section. Add a `## To test` section with clear callsites for a reviewer who doesn't have much time and just needs to click around the most important, easy-to-find callsites. Keep the overall description succinct. No em dashes.
 
 If the repo has no `.github/pull_request_template.md`, skip the template and still add `## Manual testing`. If the template has no "YES" contributing section or "Additional context" section, skip those instructions.
 
