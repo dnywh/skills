@@ -48,6 +48,14 @@ Use a card when it is the object or the interaction (an item, an invoice, a sele
 
 Prefer spacing, headings, dividers, and alignment over nested containers.
 
+## Reuse existing primitives
+
+Search the project's shared UI kit and existing feature components before adding a primitive. Prefer the design system's button, dialog, form control, or icon over a one-off.
+
+If the needed variant is missing, improve the shared primitive when that is in scope. Do not style a local one-off that will drift from the system.
+
+For third-party libraries (toasts, menus, charts, and so on), prefer Emil's `pick-ui-library` over hand-rolling or installing an abandoned package.
+
 ## Default motion to little
 
 Add motion only when it clarifies a state change, a spatial relationship, a system response, or direct press feedback. Product motion stays restrained, quick, and interruptible.

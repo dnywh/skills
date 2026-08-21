@@ -22,6 +22,16 @@ npx skills@latest add emilkowalski/skills -g
 
 In Agent chat, type `/danny` to filter skills that mention Danny White in the description.
 
+## Update
+
+Skills do not auto-update. Refresh global installs with:
+
+```bash
+npx skills update -g
+```
+
+Confirm with `npx skills ls -g`.
+
 ## Companion MCPs
 
 Skills are judgement. They do not see the rendered page.
@@ -43,5 +53,3 @@ These are highly-opinionated and likely fight with other people's defaults. Henc
 
 - Use Australian English in chat and PRs but US English in code and in these skill files
 - ASD-STE100 (simplified technical English) in chat
-
-Agent etiquette (do not post on my behalf, say when something is inaccessible, and so on) lives in `ask-why` so it travels with the skills.

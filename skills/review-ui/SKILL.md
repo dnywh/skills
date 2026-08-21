@@ -6,6 +6,7 @@ description: >-
   changes a user-visible interface, interaction, responsive behavior, or copy.
   Do not use for backend-only, infrastructure, database, API, or test-only
   work with no interface change.
+disable-model-invocation: true
 ---
 
 # Review UI

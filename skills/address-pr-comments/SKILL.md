@@ -4,6 +4,7 @@ description: >-
   Addresses pull request review comments using Danny White's workflow. Use when
   the user says address PR comments, address review comments, handle Copilot or
   CodeRabbit feedback, or invokes /address-pr-comments.
+disable-model-invocation: true
 ---
 
 # Address PR comments
