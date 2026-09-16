@@ -11,9 +11,9 @@ disable-model-invocation: true
 
 # Review UI
 
-A specialized review skill. It does one thing: review the rendered interface as an independent product designer. It does not write features, fix bugs, or review non-UI code. If there is no user-visible change, say so and stop.
+A specialized review skill. It does one thing: review the user-visible interface as an independent product designer. It does not write features, fix bugs, or review non-UI code. If there is no user-visible change, say so and stop.
 
-Apply `ask-why` for product judgement and `interface-craft` for Danny's copy, layout, and surface conventions. If Emil Kowalski's skills ([emilkowalski/skills](https://github.com/emilkowalski/skills)) are installed, use them as the design-engineering baseline: taste, interaction polish, motion, library choice, and related craft. Load the Emil skill that fits the finding (for example `emil-design-eng` for general craft, `review-animations` for motion, `pick-ui-library` when a hand-rolled control should have been a library).
+Apply `ask-why` for product judgement and `interface-craft` for Danny's copy, layout, and surface conventions. If Emil Kowalski's skills ([emilkowalski/skills](https://github.com/emilkowalski/skills)) are installed, use them as the design-engineering baseline. Load the Emil skill that fits the finding (for example `emil-design-eng`, `review-animations`, `pick-ui-library`).
 
 ## How to use this
 
@@ -28,28 +28,27 @@ Review the current work as an independent product designer. This is a read-only 
 
 Explicitly invoke the `review-ui` skill.
 
-1. Inspect the issue or PR context when available, the current branch diff against the default branch, and any uncommitted changes.
-2. Review the rendered interface before the code when a local app, preview, screenshot, or Figma frame is available.
-3. Review the relevant journey at a phone width and a desktop width. Exercise only the states and interactions relevant to the change.
-4. If authentication, data, or tooling prevents inspection, state exactly what could not be verified.
-5. Use code only to confirm or locate a user-visible issue.
+1. Inspect PR/issue context when available, the branch diff against the default branch, and any uncommitted changes.
+2. Review from the diff and code first. Infer layout, breakpoints, copy, and interaction shape from the source.
+3. Use a screenshot, Figma frame, or local app only if one is already available. Do not open deploy previews or chase auth.
+4. Keep findings separate from any general engineering review.
 ```
 
-**From a PR review command:** invoke `review-ui` only when the diff affects a human-facing interface, interaction, responsive behavior, or visible copy. Skip it on backend-only PRs. Do not fold this into a general engineering review; keep the findings separate.
+**From a PR review command:** invoke `review-ui` only when the diff affects a human-facing interface, interaction, responsive behavior, or visible copy. Skip it on backend-only PRs.
 
 ## Review mode
 
 - Remain read-only. Review as an independent designer, not as the author defending the work.
-- Review the rendered experience before the code whenever a local app, preview, screenshot, or Figma frame is available.
+- Diff and code are the default evidence. Do not spend the turn opening remote previews, signing in, or retrying blocked URLs.
+- If a screenshot, Figma frame, or already-running local UI is at hand, use it to confirm what the code suggests. Otherwise stay with the code.
 - Report only concrete problems present in the work.
-- Use code to confirm or locate a user-visible issue, not as the main subject.
 - Skip acknowledged TODOs unless they still create a release-blocking trust, accessibility, or usability failure.
-- Check phone and desktop: the same essential information and actions must survive both. Do not treat a missing preview as a pass.
+- From the code (and any available visuals), check that phone and desktop keep the same essential information and actions. Do not claim a viewport was visually verified if you only read the source.
 
 ## Return findings only
 
 1. Blocking trust, accessibility, and usability first.
 2. Non-blocking interface and interaction polish second.
-3. Anchor every finding to the affected surface, state, interaction, screenshot, or viewport.
+3. Anchor every finding to the affected surface, state, interaction, or viewport (code path is fine when no visual was available).
 4. Do not include praise, a "what works" section, generic design lessons, detached checklist results, or code commentary without a user-visible consequence.
-5. If there are no actionable findings, say so briefly and list exactly what could not be verified.
+5. If there are no actionable findings, say so briefly. List only what you could not verify when that matters (for example a state that needs auth or live data).
