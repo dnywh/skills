@@ -10,8 +10,6 @@ description: >-
 
 _Approach learned from an internal August 2026 Supabase Slack thread by Ivan Vasilov._
 
-Stacked PRs have always been possible. Since mid 2026 GitHub has native support, so use [their implementation](https://docs.github.com/en/pull-requests/reference/stacked-prs-cli-commands).
-
 The point is to de-risk shipping. Each PR in the stack must be mergeable on its own. Do not stack only to make review chunks smaller.
 
 ## How to split
@@ -26,11 +24,19 @@ An alternative, when it makes sense, is shipping **features one by one**. Smalle
 
 Do not put an unusable half-feature on main. "Mergeable on its own" means the product still works if later PRs never land.
 
+## Two valid shapes
+
+**Independent PRs into trunk** when layers do not need each other. Each PR targets `main`/`master`, ships alone, and later PRs never landing is fine. Prefer this when the split is feature-by-feature.
+
+**Dependent GitHub stacks** when later layers truly build on earlier ones and you want native stack UI / one-click merge. Use [GitHub's stacked PR CLI](https://docs.github.com/en/pull-requests/reference/stacked-prs-cli-commands) (`gh stack`), not a handmade branch-onto-branch ritual.
+
+Do not force `gh stack` onto an already-open tip PR just to look stacked. Renaming or re-layering that branch is messy; GitHub closes PRs on rename. Keep the tip branch name, open lower layers as separate PRs, mention the related PR numbers in each description, and rebase the tip after lower layers merge.
+
 ## GitHub
 
-Use GitHub's stacked PR CLI, not a handmade branch-onto-branch ritual. Do not rename a branch that already has an open PR: GitHub closes the PR.
+Each stacked PR still follows the `make-pr` skill (sentence-case headings, `## To test`, no extra comments). Only open PRs when the user asked to stack or to make the PRs.
 
-Each stacked PR still follows the `make-pr` skill (draft, sentence-case headings, `## To test`, no extra comments). Only open PRs when the user asked to stack or to make the PRs.
+Draft vs ready: tip can stay draft until lower layers land. Lower layers you want reviewed now should be ready for review, not blanketed as draft. Example: PR 1 ready for review; tip stays draft until PR 1 merges.
 
 ## What not to do
 

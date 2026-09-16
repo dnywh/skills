@@ -67,3 +67,7 @@ Do not add bouncy, theatrical, staggered, or decorative transitions to routine f
 Narrow and wide must keep the same essential information and actions. Do not hide the primary action or the current status on small screens, or invent a second hierarchy for desktop.
 
 Check the changed journey at a phone width and a desktop width. Report what you could not verify (auth, data, no preview) instead of claiming an unperformed check passed.
+
+## Whittle down
+
+Restraint is beauty. Prefer existing design tokens; do not invent a new palette for polish. Reuse the type sizes already on the screen rather than adding more. If removing a colour, shadow, radius, or container does not hurt clarity or interaction, remove it.
