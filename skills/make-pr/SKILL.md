@@ -8,7 +8,7 @@ description: >-
 
 # Make a PR
 
-Only create a pull request when the user explicitly asks (for example `/make-pr`, "make a PR", "draft a PR", or "get ready for review"). Do not open a PR as a side effect of other work.
+Only create a pull request when the user explicitly asks (for example `/make-pr`, "make a PR", "draft a PR", or "get ready for review"). Do not open a PR as a side effect of other work. Make this a draft PR unless told otherwise.
 
 Use `gh` for GitHub (issues, PRs, checks, releases). Do not add Copilot or other reviewers unless asked. Do not rename a branch that already has an open PR as GitHub closes the PR.
 
@@ -17,9 +17,9 @@ Use `gh` for GitHub (issues, PRs, checks, releases). Do not add Copilot or other
 - **Commit title:** lowercase, like `update x`. No trailing period. Focus on why, not what. Proper nouns keep their usual casing.
 - **PR title:** conventional commits with a scope, like `feat(studio): fixes thing`. No trailing period.
 
-## Drafting the PR
+## Writing the PR description
 
-Follow `.github/pull_request_template.md` when it exists. Skip any purely optional sections or gates. Keep the overall description succinct. No em dashes. Write headings in sentence case. Unless a similar section already exists in the template, add a `## Review instructions` section.
+Follow `.github/pull_request_template.md` when it exists. Skip any purely optional sections or gates. Also skip any checklists if their contents are irrelevant. Keep the overall description succinct and use bullet points where possible. No em dashes. Write headings in sentence case. Unless a similar section already exists in the template, add a `## Review instructions` section.
 
 If the repo has no `.github/pull_request_template.md`, make a minimal description following a standard "problem" and "solution" format. Still add `## Review instructions` or similar, when relevant.
 

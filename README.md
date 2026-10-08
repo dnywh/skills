@@ -49,7 +49,12 @@ For UI review (`review-ui`), connect a browser MCP so the agent can screenshot, 
 
 ## House styles
 
-These are highly-opinionated and likely fight with other people's defaults. Hence why they are listed here and not in any of the skill files. I keep them in each editor's user rules (Cursor, Codex, Claude, and so on).
+Personal always-on preferences like communication styles, PR habits, and model routing. They fight with other people's defaults so they are not installed by `skills.sh`.
 
-- Use Australian English in chat and PRs but US English in code and in these skill files
-- ASD-STE100 (simplified technical English) in chat
+Canonical file: [`house/AGENTS.md`](./house/AGENTS.md). Wire it into Codex, Claude Code, and Cursor with:
+
+```bash
+./house/install.sh
+```
+
+See [`house/README.md`](./house/README.md) for targets and the Cursor re-run note.
